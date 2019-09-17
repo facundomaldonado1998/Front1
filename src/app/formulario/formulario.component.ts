@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactoUsuario } from '../model/contacto.usuario';
 import { FormsModule } from '@angular/forms';
+import { mapaComponent } from '../mapa/mapa.component';
+
 
 @Component({
   selector: 'app-formulario',
