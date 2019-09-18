@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing, appRoutingProviders } from './app.routing';
+import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
-import { AgmCoreModule } from '@agm/core';
 import { mapaComponent } from './mapa/mapa.component';
+import { HomeMapaComponent } from './home-mapa/home-mapa.component';
 
 
 
@@ -15,7 +18,8 @@ import { mapaComponent } from './mapa/mapa.component';
     AppComponent,
     FormularioComponent,
     HomeComponent,
-    mapaComponent    
+    mapaComponent,
+    HomeMapaComponent
     ],
   imports: [
     BrowserModule,
@@ -23,7 +27,8 @@ import { mapaComponent } from './mapa/mapa.component';
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD0tVnmaegtcUM-LiZBzQEhOz0VSdjToWU'
-    })
+    }),
+    HttpClientModule
   ],
   providers: [
    appRoutingProviders

@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "http://brown-test-api-crud",
+    "secure": false
+  }
+}

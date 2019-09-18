@@ -1,4 +1,17 @@
-<h1>BIENVENIDOS A BROWN!!</h1>
-<nav>
-<a [routerLink]="['/formulario']">RECLAMOS</a>
-</nav>
+<h1>API Almirante Brown - Prueba de concepto</h1>
+<section id="reclamos">
+    <h2>Lista de reclamos</h2>
+    <div *ngIf="hasReclamos">
+        <div class="reclamo" *ngFor="let reclamo of reclamos">
+            <p>{{ reclamo.id }} / {{ reclamo.contribuyente.nombre }}  {{ reclamo.contribuyente.apellido }} / {{ reclamo.lat }},{{ reclamo.lng }}</p>
+        </div>
+    </div>
+
+    <div *ngIf="!hasReclamos">
+        <p>No hay reclamos para mostrar</p>
+    </div>
+
+    <app-home-mapa [marcadores]="marcadores"></app-home-mapa>
+
+    <a [routerLink]="['/formulario']">Cargar un nuevo reclamo</a>
+</section>

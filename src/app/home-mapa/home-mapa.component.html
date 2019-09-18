@@ -1,0 +1,6 @@
+<div *ngIf="marcadores.length > 0">
+    <agm-map [latitude]="marcadores[0].lat" [longitude]="marcadores[0].lng">
+        <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng">
+        </agm-marker>
+    </agm-map>
+</div>
